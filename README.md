@@ -104,13 +104,3 @@ The dashboard serves as a single source of truth for stakeholders, enabling them
 3.  **Product View:** Drill-down into specific models and ratings.
 
 ---
-
-
-## 📈 What Makes This Project Stand Out?
-
-- **Business-Centric Approach:** Every visual answers a specific business question (e.g., "Which brand is underperforming in Delhi?").
-- **Time Intelligence:** Advanced DAX measures (SPLY, MTD, YoY) that are highly valued in the industry.
-- **Data Storytelling:** The layout guides the user from an *Overview* -> *Breakdown by Brand* -> *Breakdown by Region* -> *Breakdown by Time*.
-- **Scalable Design:** The data model can easily accommodate new months or new cities without breaking the dashboard.
-
----
