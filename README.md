@@ -75,7 +75,6 @@ The dashboard serves as a single source of truth for stakeholders, enabling them
 | **Data Modeling** | Star Schema design, Date Table creation for time intelligence. |
 | **DAX (Calculations)** | Total Sales, Total Quantity, SPLY (Same Period Last Year), MTD (Month-to-Date), YoY Growth %. |
 | **Visualization** | Power BI (Interactive slicers, line charts, bar charts, cards, matrices). |
-| **UI/UX Design** | Clean, professional layout with brand colors for easy readability. |
 | **Version Control** | Git & GitHub for project documentation. |
 
 ---
