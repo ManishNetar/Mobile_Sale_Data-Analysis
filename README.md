@@ -1,116 +1,83 @@
+# 📱 Interactive Mobile Sales & Time-Intelligence Analytics Dashboard
+
 
 <img width="750" height="450" alt="dashboard1" src="https://github.com/user-attachments/assets/0389e1f7-23e2-4b59-8324-f75501a823d8" />
 <img width="750" height="450" alt="dashboard2" src="https://github.com/user-attachments/assets/9a2d60d6-90c2-4f1a-82fe-b08bff739775" />
 <img width="750" height="450" alt="dashboard3" src="https://github.com/user-attachments/assets/7acc0267-72f0-4ee9-b841-5055470ca136" />
 
-# 📱 Mobile Sales Analytics Dashboard
 
-## Overview
-This project presents an interactive **Mobile Sales Dashboard** built from **3,831 real-world transactions** (Oct 2021 – Oct 2024). The dashboard delivers comprehensive insights into sales performance, brand trends, customer behavior, and geographic distribution — all in one place.
 
-## 🎯 Dashboard at a Glance
-
-| Metric               | Value      |
-|----------------------|------------|
-| **Total Sales**      | $769M      |
-| **Total Quantity**   | 19K units  |
-| **Total Transactions** | 4K+     |
-| **Average Ticket**   | $40K       |
-| **Time Period**      | Oct 2021 – Oct 2024 |
+An end-to-end interactive Power BI analytical project engineered to track mobile sales performance, time-intelligence parameters (YoY / MTD growth), customer payment preferences, brand market share, and regional revenue distribution.
 
 ---
 
-## 📊 Key Dashboard Features
+## 📸 Dashboard Screenshots
 
-### 1. Sales Performance
-- **Year-over-Year (YoY)** – from 2021 to 2024
-- **Monthly & Quarterly** trends
-- **Same Period Last Year (SPLY)** comparison for accurate benchmarking
-
-### 2. Brand & Product Insights
-- **Top 5 Brands by Sales:**
-  - Apple – $161.6M  
-  - Samsung – $160.0M  
-  - OnePlus – $153.7M  
-  - Vivo – $150.1M  
-  - Xiaomi – $143.8M  
-
-- **Best‑selling Models:**  
-  iPhone SE, OnePlus Nord, Galaxy Note 20, Redmi Note 10, Vivo Y51
-
-### 3. Geographic Analysis
-- Sales broken down by **30+ cities** (Delhi, Mumbai, Bangalore, Ludhiana, etc.)
-- Identify high‑potential regions and underperforming markets
-
-### 4. Customer & Payment Insights
-- **Ratings Distribution:**
-  - 👍 **Good** – majority of customers
-  - 👎 **Poor** – 27.6%
-  - ⭐ **Average** – 186 reviews
-- **Payment Methods:** UPI, Debit Card, Credit Card, Cash
-
-### 5. Temporal Patterns
-- Sales by **day of the week** (Saturday, Sunday, etc.)
-- **Weekly, monthly, and quarterly** seasonality analysis
+| Main Dashboard | MTD Performance Report | YoY / Same Period Last Year |
+| :---: | :---: | :---: |
+| ![Dashboard Overview](dashboard1.png) | ![MTD Report](dashboard2.png) | ![SPLY Analysis](dashboard3.png) |
 
 ---
 
-## 🛠️ Tools & Technologies
-- **Data Processing:** Excel / CSV
-- **Visualization:** Power BI
-- **Data Source:** Mobile Sales Data (Oct 2021 – Oct 2024)
+## 📌 Executive Summary & Key KPIs
+
+* **Total Revenue Generated:** ₹769.2M
+* **Total Units Sold:** 19.15K units
+* **Total Transactions:** 3,835 transactions
+* **Average Transaction Value:** ₹40K
+* **Top Revenue Brand:** Apple (₹161.6M) followed closely by Samsung (₹160.0M)
+* **Top Handset Models:** iPhone SE (₹59.5M), OnePlus Nord (₹57.8M), Galaxy Note 20 (₹56.0M)
 
 ---
 
-## 📁 Data Structure (Excerpt)
+## 📊 Business Features & Dashboard Pages
 
-| Field             | Description                         |
-|-------------------|-------------------------------------|
-| Transaction ID    | Unique identifier                   |
-| Day / Month / Year| Date of transaction                 |
-| Brand             | Mobile brand                        |
-| Mobile Model      | Specific model name                 |
-| Units Sold        | Quantity purchased                  |
-| Price Per Unit    | Unit price                          |
-| Customer Name / Age | Demographics                     |
-| City              | Location                            |
-| Payment Method    | UPI / Debit Card / Credit Card / Cash |
-| Customer Rating   | 1–5 scale                           |
+### 1. Main Overview Dashboard Page
+* **Geographical Distribution:** Real-time spatial tracking across Tier-1 and Tier-2 Indian cities (Mumbai, Delhi, Bangalore, Hyderabad, Patna, Ranchi, Gorakhpur, etc.) using spatial mapping.
+* **Brand & Model Analysis:** Drill-down reporting to identify revenue drivers and fast-moving SKUs.
+* **Payment Preference Mix:** Distribution analysis tracking cash vs digital modes (UPI, Credit Card, Debit Card).
+* **Day-of-Week Revenue Velocity:** Visual tracking of daily revenue spikes showing elevated customer transactions during weekends (Saturday & Sunday).
+* **Customer Feedback Profiling:** Breakdown of sales based on customer ratings (*Good*, *Average*, *Poor*).
 
----
+### 2. MTD (Month-To-Date) Report
+* **Cumulative Sales Trajectory:** Line graph representation tracking daily revenue progression within any selected month and year.
+* **Run-Rate & Pacing Analysis:** Enables business leads to compare mid-month targets against actual cumulative sales trajectories (e.g., February 2023 achieving ₹19M across 95 transactions).
 
-## 🚀 How to Use This Dashboard
-
-### For Business Stakeholders
-- Monitor **MTD / YTD** sales against targets.
-- Spot **growth opportunities** by brand or city.
-- Adjust **inventory** based on model performance.
-- Improve **customer experience** using rating and payment preference insights.
-
-### For Data Analysts
-- Drill down into any dimension (time, brand, city, etc.).
-- Generate **custom reports** for specific business questions.
-- Identify **seasonal patterns** and **outliers**.
+### 3. YoY Performance & Time Intelligence
+* **Comparative Matrix:** Measures active performance against historical baselines (**Same Period Last Year - SPLY**) across years, quarters, and months.
+* **Quarterly & Monthly Performance Trends:** Highlights cyclical spikes and dips to improve inventory allocation before peak quarters.
 
 ---
 
-## 🔮 Future Enhancements
-- **Predictive analytics** – forecast future sales.
-- **Customer segmentation** – age‑based and location‑based targeting.
-- **Real‑time data integration**.
-- **Expanded geographic coverage** (more cities).
-- **Recommendation engine** based on purchase history.
+## 🛠️ Data Modeling & Advanced DAX Calculations
 
----
+A custom **Date Table** was modeled in Power Query and connected via a 1-to-many relationship with the main sales dataset to enable robust Time Intelligence calculations.
 
-## 📝 Note
-All data has been anonymized and aggregated to ensure customer privacy. The dashboard is designed to be a decision‑support tool for business users and analysts alike.
+### Core DAX Measures Used:
 
----
+```dax
+// Total Revenue Measure
+Total Sales = SUM('Mobile Sales'[Sales Amount])
 
-## 🤝 Connect
-Feel free to reach out with any questions, feedback, or collaboration ideas.
+// Total Quantity Sold
+Total Quantity = SUM('Mobile Sales'[Units Sold])
 
----
+// Total Transaction Count
+Transactions = COUNTROWS('Mobile Sales')
 
-**#DataAnalytics #PowerBI #BusinessIntelligence #SalesDashboard #MobileSales #DataVisualization**
+// Average Transaction Value
+Average = DIVIDE([Total Sales], [Transactions], 0)
+
+// Time Intelligence: Same Period Last Year (SPLY)
+Same Period Last Year = 
+CALCULATE(
+    [Total Sales], 
+    SAMEPERIODLASTYEAR('Calendar'[Date])
+)
+
+// Time Intelligence: Month-To-Date Sales
+MTD Sales = 
+TOTALMTD(
+    [Total Sales], 
+    'Calendar'[Date]
+)
